@@ -30,23 +30,164 @@
   </head>
 
   <body>
-    <!-- Navbar -->
+    <!------------------------------------ Navbar -------------------------------------------------------------->
 
-    <!-- Hero Section -->
+    <nav>
 
-    <!-- More about -->
+      <h1>
+        <!-- <img src="assets/images/logo-l.svg" alt="nardu.info logo">  -->
+        Nardu.info</h1>
+      <ul class="navigation">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button id="burger-menu" class="burger-menu">
+        <ion-icon class="bars" name="menu-outline"></ion-icon>
+      </button>
+    </nav>
 
-    <!-- Skills section -->
+    <!------------------------------------ Hero Section -------------------------------------------------------------->
 
-    <!-- Projects section -->
+    <section id="about" class="hero">
+      <img src="assets/images/wfh_1.svg" alt="splash art" loading="lazy" class="hero-img"/>
+      <div class="bio animate__animated animate__shakeX">
+        <h2 class="bio-title">About Me</h2>
+        <p class="bio-text">
+          Hello, welcome to Nardu.info
+          
+          I offer a range of Shopify skills to help you take your e-commerce a step up.
 
-    <!-- Contact section -->
+          <br> Shopify Expert | Web Dev
 
-    <!-- Social accounts - Fixed to the right -->
+        </p>
+      </div>
+    </section>
+    <!------------------------------------ More about -------------------------------------------------------------->
+    <section class="more-about">
+      <h2>More about me</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, soluta fugit eaque ad tempora dolorem id enim ipsam voluptatem quo?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, soluta fugit eaque ad tempora dolorem id enim ipsam voluptatem quo?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum</p>
+    </section>
+    <!------------------------------------ Skills section -------------------------------------------------------------->
+    <section class="skills" id="skills">
+      <h2 class="skills-header">My Top Skills</h2>
 
-    <!-- Footer section -->
+      <div class="skills-wrapper">
+        <div class="first-set animate__animated animate__pulse">
+          <img src="assets/icons/icons8-html-5.svg" alt="HTML5" class="icon icon-card"/>
+          <img src="assets/icons/icons8-css3.svg" alt="CSS3" class="icon icon-card"/>
+          <img src="assets/icons/icons8-javascript.svg" alt="JavaScript" class="icon icon-card"/>
+        </div>
+        <div class="second-set animate__animated animate__pulse">
+          <img src="assets/icons/icons8-git.svg" alt="git" class="icon icon-card"/>
+          <img src="assets/icons/icons8-shopify.svg" alt="Shopify" class="icon icon-card"/>
+          <img src="assets/icons/icons8-react.svg" alt="React" class="icon icon-card"/>
+        </div>
+      </div>
+    </section>
+    <!------------------------------------ Projects section -------------------------------------------------------------->
+    <section class="projects" id="projects">
 
-    <!-- Website scripts -->
+      <h2 class="projects-title">Some of my recent Projects</h2>
+      <div class="projects-container">
+        <div class="project-container project-card">
+          <img src="assets/images/expenseTracker.png" alt="expense-tracker" loading="lazy" class="project-pic"/>
+          <h3 class="project-title">Expense Tracker</h3>
+          <p class="project-details">
+            This project is a placeholder, to help with framewok design <br>
+            I need to note the image dimensions so I can create the correct material to populate here
+            This is going to be quite a challenge to do, but I am looking forward to it something fierce
+          </p>
+          <a href="#" target="_blank" class="project-link">Check it out</a>
+        </div>
+        
+        <div class="project-container project-card">
+          <img src="assets/images/netflixClone.png" alt="netflic-clone" loading="lazy" class="project-pic"/>
+          <h3 class="project-title">Netflix Clone</h3>
+          <p class="project-details">
+            This project is a placeholder, to help with framewok design <br>
+            I need to note the image dimensions so I can create the correct material to populate here
+            This is going to be quite a challenge to do, but I am looking forward to it something fierce
+          </p>
+          <a href="#" target="_blank" class="project-link">Check it out</a>
+        </div>
+
+        <div class="project-container project-card">
+          <img src="assets/images/greenyEarth.png" alt="greeny-earth" loading="lazy" class="project-pic"/>
+          <h3 class="project-title">Greeny Earth</h3>
+          <p class="project-details">
+            This project is a placeholder, to help with framewok design <br>
+            I need to note the image dimensions so I can create the correct material to populate here
+            This is going to be quite a challenge to do, but I am looking forward to it something fierce
+          </p>
+          <a href="#" target="_blank" class="project-link">Check it out</a>
+        </div>
+
+      </div>
+    </section>
+    <!------------------------------------ Contact section -------------------------------------------------------------->
+    <section class="contact" id="contact">
+      <h2>Get in touch with me</h2>
+      <div class="contact-form-container">
+        <div class="contact-form">
+          <form action="https://formspree.io/f/xyylngw" method="post">    //Get the url for your own formspree account and fix input cursor
+
+          <div class="form-control">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="sender-name" placeholder="First Name" class="input-field" required />
+          </div>
+
+          <div class="form-control">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="sender-email" placeholder="e-mail" class="input-field" required />
+          </div>
+          
+          <div class="form-control">
+            <label for="message">Message</label>
+            <textarea id="message" cols="60" rows="10" name="message" class="input-field" placeholder="Let me know how I can be of assistance">
+            </textarea>
+          </div>
+          <input type="submit" value="Submit" class="submit-btn" id="submit-btn"/>
+    
+
+        </form>
+        </div>
+      </div>
+    </section>
+
+    <!------------------------------------ Social accounts - Fixed to the right -------------------------------------------------------------->
+    <div class="socials">
+      <a href="#" target="_blank">
+        <img src="assets/icons/icons8-twitter-circled.gif" alt="Twitter" loading="lazy" class="socicon">
+      </a>
+      <a href="#" target="_blank">
+        <img src="assets/icons/icons8-instagram.gif" alt="Instagram" loading="lazy" class="socicon">
+      </a>
+      <a href="#" target="_blank">
+        <img src="assets/icons/icons8-github.gif" alt="Github" loading="lazy" class="socicon">
+      </a>
+      <a href="#" target="_blank">
+        <img src="assets/icons/icons8-linkedin-circled.gif" alt="LinkedIn" loading="lazy" class="socicon">
+      </a>
+    </div>
+    <!------------------------------------ Footer section -------------------------------------------------------------->
+    <footer>
+      <p class="copy">&copy; Copyright 2021</p>
+      <p class="copy">
+        Built with &#x2661; by
+        <a href="https://twitter.com/" target="_blank"
+          >Nardu Malherbe</a
+        >
+      </p>
+    </footer>
+    <i class="scroll-up" id="scroll-up">
+      <img src="assets/icons/icons8-upward-arrow.gif" alt="scroll-up" class="socicon up-arrow">
+    </i>
+
+    <!------------------------------------ Website scripts -------------------------------------------------------------->
     <script src="assets/js/app.js"></script>
 
     <!-- Ion icons scripts -->
