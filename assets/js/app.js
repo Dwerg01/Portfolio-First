@@ -10,3 +10,28 @@ scrollUp.addEventListener("click", () => {
 
     });
 });
+
+// Nav hamburger selsections
+
+const burger = document.querySelector("#burger-menu");
+const ul = document.querySelector("nav ul");
+const nav = document.querySelector("nav");
+const menuArrow = document.querySelector(".bars");
+
+console.log(menuArrow)
+
+
+burger.addEventListener("click", () => {
+    ul.classList.toggle("show");
+    menuArrow.classList.toggle("rotate");
+})
+
+// Close hamburger manu after a link is clicked
+
+const navLink = document.querySelectorAll('.nav-link');
+
+navLink.forEach((link) => 
+link.addEventListener("click", () => {
+    ul.classList.remove("show");
+    menuArrow.classList.remove("rotate");
+    }));
