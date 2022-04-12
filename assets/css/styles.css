@@ -6,20 +6,25 @@
   --normal-font: 400;
   --bold-font: 700;
   --bolder-font: 900;
-  --bg-color: #fcfcfc;
-  --primary-color: #4756df;
+  --bg-color: hsla(0, 0%, 99%, 0.125);
+  --backdrop: linear-gradient(0, rgb(76, 20, 20), black);
+  --primary-color: #f1f1f1;
   --secondary-color: #ff7235;
-  --primary-shadow: #8b8eaf;
-  --secondary-shadow: #a17a69;
+  --primary-shadow: #f1f1f1;
+  --secondary-shadow: #1081f9;
   --bottom-margin: 0.5rem;
   --bottom-margin-2: 1rem;
   --line-height: 1.7rem;
   --transition: 0.3s;
   --shadow-effect: 0px 2px 15px 2px var(--primary-shadow);
+  --shadow-effect-secondary: 0px 2px 15px 2px var(--secondary-shadow);
+
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
+  color: var(--primary-color);
+
 }
 
 /* CSS Resets */
@@ -35,16 +40,32 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--primary-color);
 }
 
-a:hover {
+/* a:hover {
   text-decoration: none;
   color: var(--secondary-color);
-}
+} */
 
 body {
   font-family: var(--font-family);
+  background-image: var(--backdrop);
+}
+
+#super {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
 }
 
 nav {
@@ -58,6 +79,8 @@ nav {
   padding: 1.5rem 3.5rem;
   background-color: var(--bg-color);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  backdrop-filter:blur(5px);
+
 }
 
 nav h1 {
@@ -65,21 +88,17 @@ nav h1 {
 }
 
 nav img {
-  width: 3rem;
+  display: inline;
+  fill: transparent;
+  height: 3rem;
+  stroke-width: 8px;
+  stroke: var(--primary-color);
 }
 
-nav a {
-  color: var(--primary-color);
-  transition: var(--transition);
-}
-
-nav a:hover {
-  color: var(--secondary-color);
-}
 
 nav ul {
   display: flex;
-  width: 60%;
+  width: 75%;
   left: 0;
   justify-content: space-around;
 }
@@ -89,11 +108,12 @@ nav ul {
   align-self: center;
 }
 
-/* ------------------------------------------------------------------------------------------------------button animations---------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------------button animations-------------------------------------------------------- */
+
 .shape {
-  fill: transparent;
   stroke-dasharray: 100 260;
   stroke-dashoffset: -170;
+  fill: transparent;
   stroke-width: 8px;
   stroke: var(--primary-color);
 }
@@ -111,7 +131,7 @@ nav ul {
 	margin: 0 auto;
   top: 50%;
   width: 3rem;
-  color: var(--primary-color)
+  color: var(--primary-color);
 }
 
 
@@ -132,17 +152,18 @@ nav ul {
 .svg-wrapper:hover .shape {
   -webkit-animation: 0.5s draw linear forwards;
   animation: 0.5s draw linear forwards;
+  transition: ease-in-out 0.5s;
 }
 
 
 
-/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------------------------------- */
 .arrow-menu {
   color: var(--primary-color);
-  font-size: 2rem;
+  font-size: 4rem;
   border: 0;
-  background-color: transparent;
   cursor: pointer;
+  background-color: transparent;
   display: none;
 }
 
@@ -165,7 +186,7 @@ nav ul {
   width: 25rem;
   padding: 0.625rem;
   border-radius: 6px;
-  box-shadow: var(--shadow-effect);
+  box-shadow: var(--shadow-effect-secondary);
 }
 
 
@@ -181,11 +202,15 @@ nav ul {
 
 .more-about {
   background-color: var(--bg-color);
+  background-size: auto;
   padding: 1rem 6rem;
   text-align: center;
-  width: min(100% - 2rem, 62.5rem);
+  /* width: min(100% - 2rem, 62.5rem); */
+  width: 100%;
   margin-inline: auto;
+  border-radius: 5 px;
 }
+
 
 .more-about h2 {
   margin-bottom: var(--bottom-margin);
@@ -266,7 +291,7 @@ nav ul {
 }
 
 .project-card {
-  background-color: #fff;
+  background-color: var(--primary-color);
   border-radius: 11px;
   box-shadow: 0 3px 10px var(--primary-shadow);
   padding: 20px;
@@ -340,18 +365,27 @@ nav ul {
 }
 
 .socials {
+  color: var(--primary-color);
+  backdrop-filter:blur(5px);
   display: flex;
   flex-direction: column;
+  top: 25%;
   position: fixed;
-  right: 1%;
-  top:30%;
+  left: calc(50vw - 35%);
 }
 
 .socicon {
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  transition: ease-out 0.2s;
+
 }
 
+.socicon:hover {
+  /* scale: 1.1; */
+  transform: scale(1.2);
+  transition: ease-in 0.2s;
+}
 
 footer {
   background-color: var(--bg-color);
@@ -363,8 +397,8 @@ footer {
 
 .scroll-up {
   position: fixed;
-  right: 1%;
-  bottom: 6%;
+  left: calc(50vw - 35%);
+  bottom: 10%;
   cursor: pointer;
 }
 
@@ -465,6 +499,17 @@ footer {
   .contact-form-container {
     max-width: 23.75rem;
   }
+
+  .socials {
+    left: 3%;}
+
+  .scroll-up {
+    position: fixed;
+    left: 3%;
+    bottom: 6%;
+    cursor: pointer;
+  }
+
 }
 
 @media screen and (max-width: 420px) {
