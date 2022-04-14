@@ -6,7 +6,7 @@
   --normal-font: 400;
   --bold-font: 700;
   --bolder-font: 900;
-  --bg-color: hsla(0, 0%, 99%, 0.125);
+  --bg-color: hsla(0, 0%, 0%, 0.5);
   --backdrop: linear-gradient(0, rgb(76, 20, 20), black);
   --primary-color: #f1f1f1;
   --secondary-color: #ff7235;
@@ -22,7 +22,7 @@
 }
 
 html {
-  scroll-behavior: auto;
+  /* scroll-behavior: auto; */
   color: var(--primary-color);
 
 }
@@ -56,6 +56,7 @@ body {
   height: 100vh;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
+  overflow-x: hidden;
 
 }
 
@@ -74,12 +75,14 @@ nav {
   left: 0;
   z-index: 1;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 1.5rem 3.5rem;
   background-color: var(--bg-color);
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(5px);
   backdrop-filter:blur(5px);
+  
+  width: 100vw;
 
 }
 
@@ -89,7 +92,7 @@ nav h1 {
 
 nav img {
   display: inline;
-  fill: transparent;
+  /* fill: transparent; */
   height: 3rem;
   stroke-width: 8px;
   stroke: var(--primary-color);
@@ -97,10 +100,11 @@ nav img {
 
 
 nav ul {
+
   display: flex;
   width: 75%;
-  left: 0;
   justify-content: space-around;
+  
 }
 
 .nav-text {
@@ -205,7 +209,6 @@ nav ul {
   background-size: auto;
   padding: 1rem 6rem;
   text-align: center;
-  /* width: min(100% - 2rem, 62.5rem); */
   width: 100%;
   margin-inline: auto;
   border-radius: 5 px;
@@ -259,6 +262,7 @@ nav ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .project-pic {
@@ -302,6 +306,7 @@ nav ul {
 .contact {
   margin-top: 2rem;
   margin-bottom: 2rem;
+
 }
 
 .contact h2 {
@@ -349,7 +354,7 @@ nav ul {
   padding: 10px;
   margin: 10px 0;
   color: var(--primary-color);
-  background-color: #fff;
+  background-color: hsla(0, 0%, 20%, 0.682);
   border: 2px solid var(--primary-color);
   border-radius: 5px;
   font-size: 1rem;
@@ -367,10 +372,12 @@ nav ul {
 .socials {
   color: var(--primary-color);
   backdrop-filter:blur(5px);
+  background-color: var(--backdrop);
   display: flex;
   flex-direction: column;
   top: 25%;
   position: fixed;
+  z-index: 1;
   left: calc(50vw - 35%);
 }
 
@@ -378,7 +385,7 @@ nav ul {
   width: 2.5rem;
   height: 2.5rem;
   transition: ease-out 0.2s;
-
+  
 }
 
 .socicon:hover {
@@ -390,7 +397,7 @@ nav ul {
 footer {
   background-color: var(--bg-color);
   padding: 1.25rem;
-  text-align: center;
+  text-align: justify;
   margin: 2rem 0 0;
 }
 
@@ -400,33 +407,50 @@ footer {
   left: calc(50vw - 35%);
   bottom: 10%;
   cursor: pointer;
+  transform: scale(1);
+  transition: ease-out 0.2s;
+
 }
 
 
+.scroll-up:hover {
+  transform: scale(1.2);
+  transition: ease-in 0.2s;
+  
+  }
 
 @media screen and (max-width: 720px) {
   /* 720px width and below */
   nav {
-    padding: 1.5rem 1rem;
-    align-items: center;
+    padding: 0;
+    justify-content: space-around;
+    height: 6rem;
+  
   }
 
   nav ul {
     position: fixed;
     background-color: var(--bg-color);
+      backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     flex-direction: column;
-    top: 86px;
-    left: 10px;
-    width: min(100% - 2rem);
-    text-align: center;
+    top: 6rem;
+    width: calc(100% - 2rem);
     transform: translateX(110%);
     transition: transform 0.5s ease-in;
+    justify-content: center;
+  }
+  
+  nav ul.show {
+    transform: translateX(0);
+    transition: transform 0.5s ease-out;
   }
   
   nav ul li {
-    margin: 8px;
+    left: 5%;
+    margin: 1.2rem 0;
   }
-
+  
   .arrow-menu {
     display: block;
   }
@@ -435,16 +459,12 @@ footer {
     transform: rotateY(0deg);
     transition: transform 0.5s ease-in-out;
   }
-
+  
   .rotate {
     transform: rotateY(180deg);
-    transition: transform 0.5s ease-in-out;
-    filter: hue-rotate(80deg);
+    transition: transform 0.5s ease-in;
   }
-
-  nav ul.show {
-    transform: translateX(0);
-  }
+  
 
   .hero {
     margin-top: -4rem;
@@ -455,6 +475,7 @@ footer {
   .hero-img {
     height: 30rem;
     width: 30rem;
+    
   }
 
 
@@ -497,7 +518,7 @@ footer {
 
 
   .contact-form-container {
-    max-width: 23.75rem;
+    max-width: 90%;
   }
 
   .socials {
