@@ -181,8 +181,11 @@ nav ul {
 }
 
 .hero-img {
-  height: 25rem;
-  width: 25rem;
+  height: 14.5rem;
+  width: 12.5rem;
+  border-radius: 45%;
+  border: none;
+  box-shadow: var(--shadow-effect-secondary);
 }
 
 
@@ -472,15 +475,15 @@ footer {
     gap: 0;
   }
 
-  .hero-img {
+  /* .hero-img {
     height: 30rem;
     width: 30rem;
     
-  }
+  } */
 
 
   .bio {
-    margin-top: -7rem;
+    margin-top: 2rem;
     width: 20.5rem;
   }
 
@@ -534,10 +537,10 @@ footer {
 }
 
 @media screen and (max-width: 420px) {
-  .hero img {
+  /* .hero img {
     height: 37.5rem;
     width:23rem;
-  }
+  } */
 
   .bio {
     width: 18.3rem;
