@@ -36,12 +36,12 @@
       <nav>
         <img src="assets/images/nardu.info-invert.svg" id="logo" alt="nardu.info logo">
         <h1>
-            Nardu.info
+            <a href="#about" class="nav-link">Nardu.info</a>
         </h1>
         <ul class="navigation">
           <li>
             <div class="svg-wrapper">
-              <a href="#about" class="nav-link">
+              <a href="#more-about" class="nav-link">
                 <svg height="40" width="120" xmlns="http://www.w3.org/2000/svg">
                   <text class="nav-text" x="60" y="25" text-anchor="middle">About</text>
                   <rect class="shape" height="40" width="120" />
@@ -85,40 +85,41 @@
       <section id="about" class="hero">
         <img src="assets/images/Pro profile pic.png" alt="splash art" loading="lazy" class="hero-img"/>
         <div class="bio animate__animated animate__fadeInDown">
-          <h2 class="bio-title">Expert Shopify Developer</h2>
+          <h2>Nardu Malherbe</h2>
+          <h3 class="bio-title">Shopify Expert | Web Dev</h3>
           <p class="bio-text">
+            I offer a range of skills to help you <br> create, customize and level up your Shopify&reg; store. <br>
+
+            With more than 10 years of professional IT services experience, 
+            I understand that communication is the key to a successful partnerhship.<br>
             
-            I offer a range of skills to help you set up, customize and take your store a step forward.
-            
-            
-            I offer a range of Shopify skills to help you take your e-commerce a step up.
-            I offer a range of Shopify skills to help you take your e-commerce a step up.
-            <br> Shopify Expert | Web Dev
           </p>
+          <p class="allow-me">Allow me to assist with your Shopify store needs</p>
         </div>
       </section>
       <!------------------------------------ More about -------------------------------------------------------------->
-      <section class="more-about">
-        <h2>Approach</h2>
-        <p> I am   </p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, soluta fugit eaque ad tempora dolorem id enim ipsam voluptatem quo?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum</p>
+      <section class="more-about" id="more-about">
+        <div class="my-method">
+          <h2>My Method</h2>
+          <p>Initial consultation to ensure I understand your expectations and timelines are set</p>
+          <p>I will keep you up to date with the progress and status of the project </p>
+          <p>Once the work is complete, I will present it for your approval</p>
+          <p>I conduct post implementation checks to ensure successful project completion</p>
+        </div>
       </section>
       <!------------------------------------ Skills section -------------------------------------------------------------->
       <section class="skills" id="skills">
         <h2 class="skills-header">My Top Skills</h2>
-        <div class="skills-wrapper">
-          <div class="first-set animate__animated animate__pulse">
+          <div class="skills-wrapper animate__animated animate__pulse">
             <img src="assets/icons/icons8-html-50.svg" alt="HTML5" class="icon icon-card"/>
             <img src="assets/icons/icons8-css3.svg" alt="CSS3" class="icon icon-card"/>
             <img src="assets/icons/icons8-javascript.svg" alt="JavaScript" class="icon icon-card"/>
-          </div>
-          <div class="second-set animate__animated animate__pulse">
+          <!-- </div>
+          <div class="second-set animate__animated animate__pulse"> -->
             <img src="assets/icons/icons8-git.svg" alt="git" class="icon icon-card"/>
             <img src="assets/icons/icons8-shopify.svg" alt="Shopify" class="icon icon-card"/>
             <img src="assets/icons/icons8-react.svg" alt="React" class="icon icon-card"/>
           </div>
-        </div>
       </section>
       <!------------------------------------ Projects section -------------------------------------------------------------->
       <section class="projects" id="projects">
@@ -172,7 +173,7 @@
       
             <div class="form-control">
               <label for="message">Message</label>
-              <textarea id="message" cols="60" rows="10" name="message" class="input-field" placeholder="What do you need asssitance with?">
+              <textarea id="message" cols="60" rows="10" name="message" placeholder="Tell me how I can be of service..."  class="input-field" required>
               </textarea>
             </div>
             <input type="submit" value="Submit" class="submit-btn" id="submit-btn"/>
@@ -199,7 +200,7 @@
 
       <a href="#about" class="nav-link">
 
-        <i class="scroll-up" id="scroll-up">
+        <i class="scroll-up socicon" id="scroll-up">
           <img src="assets/icons/icons8-home.svg" alt="scroll to top" class="socicon up-arrow">
         </i>
       </a>

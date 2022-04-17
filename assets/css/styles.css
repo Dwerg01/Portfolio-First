@@ -12,17 +12,18 @@
   --secondary-color: #ff7235;
   --primary-shadow: #f1f1f1;
   --secondary-shadow: #1081f9;
-  --bottom-margin: 0.5rem;
-  --bottom-margin-2: 1rem;
-  --line-height: 1.7rem;
+  --bottom-margin: 1rem;
+  --bottom-margin-2: 2rem;
+  --line-height: 1.8rem;
   --transition: 0.3s;
   --shadow-effect: 0px 2px 15px 2px var(--primary-shadow);
   --shadow-effect-secondary: 0px 2px 15px 2px var(--secondary-shadow);
+  font-size: 20px;;
 
 }
 
 html {
-  /* scroll-behavior: auto; */
+  text-align: center;
   color: var(--primary-color);
 
 }
@@ -42,10 +43,10 @@ a {
   text-decoration: none;
 }
 
-/* a:hover {
-  text-decoration: none;
-  color: var(--secondary-color);
-} */
+p {
+  word-spacing: 3pt;
+}
+
 
 body {
   font-family: var(--font-family);
@@ -86,8 +87,9 @@ nav {
 
 }
 
-nav h1 {
+nav h1 a {
   color: var(--primary-color);
+  font-size: 52px;
 }
 
 nav img {
@@ -123,7 +125,7 @@ nav ul {
 }
 
 .nav-link {
-  font-size: 1rem;
+  font-size: 1.25rem;
   letter-spacing: 0.2rem;
   line-height: 1.5rem;
   top: 0.5rem;
@@ -181,42 +183,61 @@ nav ul {
 }
 
 .hero-img {
-  height: 14.5rem;
-  width: 12.5rem;
-  border-radius: 45%;
+  height: 30%;
+  max-height: 19rem;
+  border-radius: 0.5rem;
   border: none;
   box-shadow: var(--shadow-effect-secondary);
 }
 
 
 .bio {
-  width: 25rem;
-  padding: 0.625rem;
+  width: 90vw;
+  max-width: 40rem;
+  padding: 1.25rem;
   border-radius: 6px;
   box-shadow: var(--shadow-effect-secondary);
+  text-align: center;
 }
 
 
 .bio h1 {
+  margin-bottom: var(--bottom-margin-2);
+}
+
+.bio h3 {
   margin-bottom: var(--bottom-margin);
 }
 
 .bio p {
   line-height: var(--line-height);
   padding: 0.3rem 0;
+  word-spacing: 2pt;
 }
 
-
+.allow-me {
+  word-spacing: 4pt;
+  font-weight: 600;
+}
 .more-about {
-  background-color: var(--bg-color);
-  background-size: auto;
-  padding: 1rem 6rem;
-  text-align: center;
-  width: 100%;
-  margin-inline: auto;
-  border-radius: 5 px;
+  height:100vh;
 }
 
+.my-method {
+  /* background-color: var(--bg-color); */
+  max-width: 40rem;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: var(--shadow-effect-secondary);
+  background-size: auto;
+  width: 90%;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.my-method > p {
+  border-bottom: 1px solid var(--secondary-color);
+}
 
 .more-about h2 {
   margin-bottom: var(--bottom-margin);
@@ -224,6 +245,7 @@ nav ul {
 
 .more-about p {
   line-height: var(--line-height);
+  text-align: left;
   padding: 0.4rem;
 }
 
@@ -238,18 +260,20 @@ nav ul {
   margin-bottom: 1rem;
 }
 
-.skills-wrapper img {
-  padding: 1.25rem;
+.skills-wrapper{
+  width: 100%;
 }
 
-.icon {
-  width: 11.875rem;
-  height: 11.25rem;
+.skills-wrapper img {
+  padding: 0.75rem;
 }
 
 .icon-card {
   background-color: #fff;
+  width: 25%;
+  aspect-ratio: 1 /1;
   border-radius: 11px;
+  max-width: 19rem;
   box-shadow: 0 3px 10px var(--secondary-shadow);
   padding: 20px;
   margin: 10px;
@@ -327,6 +351,7 @@ nav ul {
 
 .contact-form-container label {
   line-height: 2.7em;
+  font-size: 1.2rem;
   font-weight: var(--bold-font);
   color: var(--primary-color);
 }
@@ -349,7 +374,7 @@ nav ul {
 
 .input-field::placeholder {
   padding: 10px;
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .submit-btn {
@@ -367,7 +392,7 @@ nav ul {
 }
 
 .submit-btn:hover {
-  color: hsl(0, 0%, 100%);
+  color: var(--secondary-color);
   background-color: var(--primary-color);
   border: 2px solid var(--primary-color);
 }
@@ -385,8 +410,8 @@ nav ul {
 }
 
 .socicon {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 5vh;
+  /* height: 2.5vh; */
   transition: ease-out 0.2s;
   
 }
@@ -402,6 +427,7 @@ footer {
   padding: 1.25rem;
   text-align: justify;
   margin: 2rem 0 0;
+  /* position: fixed; */
 }
 
 
@@ -421,6 +447,10 @@ footer {
   transition: ease-in 0.2s;
   
   }
+
+/* ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> */
+/* ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> */
+/* ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> */
 
 @media screen and (max-width: 720px) {
   /* 720px width and below */
@@ -448,7 +478,6 @@ footer {
     transform: translateX(0);
     transition: transform 0.5s ease-out;
   }
-  
   nav ul li {
     left: 5%;
     margin: 1.2rem 0;
@@ -468,88 +497,90 @@ footer {
     transition: transform 0.5s ease-in;
   }
   
-
+  
   .hero {
-    margin-top: -4rem;
     flex-direction: column;
     gap: 0;
   }
-
-  /* .hero-img {
-    height: 30rem;
-    width: 30rem;
-    
-  } */
-
-
-  .bio {
-    margin-top: 2rem;
-    width: 20.5rem;
-  }
-
-  .more-about {
-    margin-top: 2rem;
-    padding: 1rem 3.5rem;
+  
+  .hero-img {
+    height: 20vh;
+    /* width: 20vh; */
+    opacity: 0.9;    
+    margin-top: 6.5rem;
   }
   
-  .more-about h2 {
-    text-align: center;
+  
+  .bio {
+    margin-top: 1.5rem;
   }
-  .more-about p {
-    text-align: justify;
+  
+  
+  .my-method {  
+    padding: 0.5rem;
+    text-align: center;
   }
 
   .icon {
-    width: 5.875rem;
-    height: 5.25rem;
+    width: 33%;
+    aspect-ratio: 1/1;
   }
-
+  
   .projects-container {
     flex-direction: column;
   }
   
   .project-container {
     /* flex-basis: 37.5rem ; */
-
+    
     width: 23.75rem;
   }
-
+  
   .project-pic {
     width: 100%;
     height: auto;
   }
-
-
+  
+  
   .contact-form-container {
     max-width: 90%;
   }
-
+  
   .socials {
     left: 3%;}
-
-  .scroll-up {
-    position: fixed;
-    left: 3%;
-    bottom: 6%;
-    cursor: pointer;
+    
+    .scroll-up {
+      position: fixed;
+      left: 3%;
+      bottom: 6%;
+      cursor: pointer;
+    }
+    
   }
-
-}
-
-@media screen and (max-width: 420px) {
+  
+  @media screen and (max-width: 420px) {
+    * {
+      font-size: 14px;
+    }
   /* .hero img {
     height: 37.5rem;
     width:23rem;
   } */
-
+  .nav-link {
+    font-size: 1.2rem;
+  }
+  
   .bio {
     width: 18.3rem;
   }
 
+
+  
   .project-container {
     width: 17.875rem;
   }
 }
+
 
 /* -------------------------------------------------------------------------------------------------------Test Button CSS------------------------------------------------------------------------------------------------------------------------- */
 
