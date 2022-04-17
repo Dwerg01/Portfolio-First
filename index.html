@@ -83,12 +83,12 @@
       </nav>
       <!------------------------------------ Hero Section -------------------------------------------------------------->
       <section id="about" class="hero">
-        <img src="assets/images/Pro profile pic.png" alt="splash art" loading="lazy" class="hero-img"/>
+        <img src="assets/images/pro pic b 250px.png" alt="splash art" loading="lazy" class="hero-img"/>
+        <h2>Nardu Malherbe</h2>
         <div class="bio animate__animated animate__fadeInDown">
-          <h2>Nardu Malherbe</h2>
           <h3 class="bio-title">Shopify Expert | Web Dev</h3>
           <p class="bio-text">
-            I offer a range of skills to help you <br> create, customize and level up your Shopify&reg; store. <br>
+            I offer a range of services to help you <br> create, customize and <br> level up your Shopify&reg; store. <br>
 
             With more than 10 years of professional IT services experience, 
             I understand that communication is the key to a successful partnerhship.<br>
@@ -99,12 +99,12 @@
       </section>
       <!------------------------------------ More about -------------------------------------------------------------->
       <section class="more-about" id="more-about">
+        <h2>My Method</h2>
         <div class="my-method">
-          <h2>My Method</h2>
           <p>Initial consultation to ensure I understand your expectations and timelines are set</p>
           <p>I will keep you up to date with the progress and status of the project </p>
           <p>Once the work is complete, I will present it for your approval</p>
-          <p>I conduct post implementation checks to ensure successful project completion</p>
+          <p>Final implementation checks to ensure successful project completion</p>
         </div>
       </section>
       <!------------------------------------ Skills section -------------------------------------------------------------->
@@ -124,41 +124,42 @@
       <!------------------------------------ Projects section -------------------------------------------------------------->
       <section class="projects" id="projects">
         <h2 class="projects-title">Some of my recent Projects</h2>
-        <div class="projects-container">
-          <div class="project-container project-card">
-            <h3 class="project-title">Youtube search API project</h3>
-            <img src="assets/images/expenseTracker.png" alt="expense-tracker" loading="lazy" class="project-pic"/>
-            <p class="project-details">
-              This project is a placeholder, to help with framewok design <br>
-              
-            </p>
-            <a href="#" target="_blank" class="project-link">Check it out</a>
-          </div>
-      
-          <div class="project-container project-card">
-            <h3 class="project-title">Unsplash search API</h3>
-            <img src="assets/images/netflixClone.png" alt="netflic-clone" loading="lazy" class="project-pic"/>
-            <p class="project-details">
-              I need to note the image dimensions so I can create the correct material to populate here
-              This is going to be quite a challenge to do, but I am looking forward to it something fierce
-            </p>
-            <a href="#" target="_blank" class="project-link">Check it out</a>
-          </div>
-          <div class="project-container project-card">
-            <h3 class="project-title">Greeny Earth</h3>
-            <img src="assets/images/greenyEarth.png" alt="greeny-earth" loading="lazy" class="project-pic"/>
-            <p class="project-details">
-              This project is a placeholder, to help with framewok design <br>
-              I need to note the image dimensions so I can create the correct material to populate here
-              This is going to be quite a challenge to do, but I am looking forward to it something fierce
-            </p>
-            <a href="#" target="_blank" class="project-link">Check it out</a>
-          </div>
+        <div class="carousel" data-carousel>
+          <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+          <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+          <ul data-slides>
+            <li class="slide" data-active>
+              <div class="project-container project-card">
+                <a href="#" target="_blank" class="project-link">
+                  <h2 class="project-title">Youtube search API project</h2>
+                  <img src="assets/images/expenseTracker.png" alt="expense-tracker" loading="lazy" class="project-pic"/>
+                </a>
+              </div>
+            </li>
+            <li class="slide">
+              <div class="project-container project-card">
+                <a href="#" target="_blank" class="project-link">
+                  <h2 class="project-title">Unsplash search API</h2>
+                  <img src="assets/images/netflixClone.png" alt="netflic-clone" loading="lazy" class="project-pic"/>
+                </a>
+              </div>            
+            </li>
+            <li class="slide">
+              <div class="project-container project-card">
+                <a href="#" target="_blank" class="project-link">
+                  <h2 class="project-title">Greeny Earth</h2>
+                  <img src="assets/images/greenyEarth.png" alt="greeny-earth" loading="lazy" class="project-pic"/>
+                </a>
+              </div>
+            </li>
+          </ul>
         </div>
+
+
       </section>
       <!------------------------------------ Contact section -------------------------------------------------------------->
       <section class="contact" id="contact">
-        <h2 class="title">Let's get in touch, leave me a message.</h2>
+        <h2 class="title">Let's get in touch, leave me a message</h2>
         <div class="contact-form-container">
           <div class="contact-form">
             <form action="https://formspree.io/f/xjvlenjq" method="post">
@@ -173,7 +174,7 @@
       
             <div class="form-control">
               <label for="message">Message</label>
-              <textarea id="message" cols="60" rows="10" name="message" placeholder="Tell me how I can be of service..."  class="input-field" required>
+              <textarea id="message" cols="60" rows="10" name="message" placeholder="Tell me what you need help with"  class="input-field" required>
               </textarea>
             </div>
             <input type="submit" value="Submit" class="submit-btn" id="submit-btn"/>
@@ -181,22 +182,22 @@
           </form>
           </div>
         </div>
+        <div class="socials" alt="social links">
+          <a href="#" target="_blank">
+            <img src="assets/icons/icons8-twitter-50.svg" alt="Twitter" loading="lazy" class="socicon">
+          </a>
+          <a href="#" target="_blank">
+            <img src="assets/icons/icons8-instagram.svg" alt="Instagram" loading="lazy" class="socicon">
+          </a>
+          <a href="#" target="_blank">
+            <img src="assets/icons/icons8-github-50.svg" alt="Github" loading="lazy" class="socicon">
+          </a>
+          <a href="#" target="_blank">
+            <img src="assets/icons/icons8-linkedin.svg" alt="LinkedIn" loading="lazy" class="socicon">
+          </a>
+        </div>
       </section>
       <!------------------------------------ Social accounts - Fixed to the right -------------------------------------------------------------->
-      <div class="socials" alt="social links">
-        <a href="#" target="_blank">
-          <img src="assets/icons/icons8-twitter-50.svg" alt="Twitter" loading="lazy" class="socicon">
-        </a>
-        <a href="#" target="_blank">
-          <img src="assets/icons/icons8-instagram.svg" alt="Instagram" loading="lazy" class="socicon">
-        </a>
-        <a href="#" target="_blank">
-          <img src="assets/icons/icons8-github-50.svg" alt="Github" loading="lazy" class="socicon">
-        </a>
-        <a href="#" target="_blank">
-          <img src="assets/icons/icons8-linkedin.svg" alt="LinkedIn" loading="lazy" class="socicon">
-        </a>
-      </div>
 
       <a href="#about" class="nav-link">
 
@@ -206,7 +207,7 @@
       </a>
       <!------------------------------------ Footer section -------------------------------------------------------------->
       <footer>
-        <p class="copy">&copy; Copyright <script>document.write(new Date().getFullYear())</script></p>
+        <p class="copywrite"></p>
         <p class="copy">
           Built with &#x2661; by
           <a href="https://twitter.com/" target="_blank">
@@ -215,15 +216,15 @@
         </p>
       </footer>
       <!------------------------------------ Website scripts -------------------------------------------------------------->
-      <script src="assets/js/app.js"></script>
+      <script src="assets/js/app.js" defer></script>
       <!-- Ion icons scripts -->
       <script
         type="module"
-        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js">
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" defer>
       </script>
       <script
         nomodule
-        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js">
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer>
       </script>
     </div>
   </body>
