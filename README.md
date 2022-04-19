@@ -5,7 +5,7 @@ This Portfolio is meant for mobile first and is a simple 5 page site that gets s
 Coming enhancements:
 
 Animate elements in on scroll
-Aesthetics review
+Aesthetics review to be done once technical review is complete
 
 
 ## Original Author
