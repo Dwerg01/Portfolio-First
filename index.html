@@ -1,229 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!--CSS Styles -->
-    <link rel="stylesheet" href="assets/css/styles.css" />
-
-    <!-- Favicons -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/icons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/icons/logo_master_3lG_4.ico"
-    />
-
-    <!-- Animate CSS CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <title>nardu.info | Shopify Expert</title>
-  </head>
-
-  <body>
-    <!------------------------------------ Navbar -------------------------------------------------------------->
-
-    <div id="super">
-      <nav>
-        <img src="assets/images/nardu.info-invert.svg" id="logo" alt="nardu.info logo">
-        <h1>
-            <a href="#about" class="nav-link">Nardu.info</a>
-        </h1>
-        <ul class="navigation">
-          <li>
-            <div class="svg-wrapper">
-              <a href="#more-about" class="nav-link">
-                <svg height="40" width="120" xmlns="http://www.w3.org/2000/svg">
-                  <text class="nav-text" x="60" y="25" text-anchor="middle">About</text>
-                  <rect class="shape" height="40" width="120" />
-                </svg>
-              </a>
-            </div>
-          </li>
-          <li>
-            <div class="svg-wrapper">
-              <a href="#skills" class="nav-link">
-                <svg height="40" width="120" xmlns="http://www.w3.org/2000/svg">
-                <text class="nav-text" x="60" y="25" text-anchor="middle">Skills</text>
-                <rect class="shape" height="40" width="120" />
-              </svg>
-            </div>
-          </a></li>
-          <li>
-            <div class="svg-wrapper">
-              <a href="#projects" class="nav-link">
-                <svg height="40" width="120" xmlns="http://www.w3.org/2000/svg">
-                <text class="nav-text" x="60" y="25" text-anchor="middle">Projects</text>
-                <rect class="shape" height="40" width="120" />
-              </svg>
-            </div>
-          </a></li>
-          <li>
-            <div class="svg-wrapper">
-              <a href="#contact" class="nav-link">
-                <svg height="40" width="120" xmlns="http://www.w3.org/2000/svg">
-                <text class="nav-text" x="60" y="25" text-anchor="middle">Contact</text>
-                <rect class="shape" height="40" width="120" />
-              </svg>
-            </div>
-          </a></li>
-        </ul>
-        <button id="burger-menu" class="arrow-menu">
-          <ion-icon class="bars" name="chevron-back-outline"></ion-icon>
-        </button>
-      </nav>
-      <!------------------------------------ Hero Section -------------------------------------------------------------->
-      <section id="about" class="hero">
-        <img src="assets/images/pro pic b 250px.png" alt="splash art" loading="lazy" class="hero-img"/>
-        <h2>Nardu Malherbe</h2>
-        <div class="bio animate__animated animate__fadeInDown">
-          <h3 class="bio-title">Shopify Expert | Web Dev</h3>
-          <p class="bio-text">
-            I offer a range of services to help you <br> create, customize and <br> level up your Shopify&reg; store. <br>
-
-            With more than 10 years of professional IT services experience, 
-            I understand that communication is the key to a successful partnerhship.<br>
-            
-          </p>
-          <p class="allow-me">Allow me to assist with your Shopify store needs</p>
-        </div>
-      </section>
-      <!------------------------------------ More about -------------------------------------------------------------->
-      <section class="more-about" id="more-about">
-        <h2>My Method</h2>
-        <div class="my-method">
-          <p>Initial consultation to ensure I understand your expectations and timelines are set</p>
-          <p>I will keep you up to date with the progress and status of the project </p>
-          <p>Once the work is complete, I will present it for your approval</p>
-          <p>Final implementation checks to ensure successful project completion</p>
-        </div>
-      </section>
-      <!------------------------------------ Skills section -------------------------------------------------------------->
-      <section class="skills" id="skills">
-        <h2 class="skills-header">My Top Skills</h2>
-          <div class="skills-wrapper animate__animated animate__pulse">
-              <img src="assets/icons/icons8-shopify.svg" alt="Shopify" class="icon icon-card"/>
-              <img src="assets/icons/icons8-git.svg" alt="git" class="icon icon-card"/>
-              <img src="assets/icons/icons8-jquery.svg" alt="jQuery" class="icon icon-card"/>
-              <img src="assets/icons/icons8-html-50.svg" alt="HTML5" class="icon icon-card"/>
-              <img src="assets/icons/icons8-css3.svg" alt="CSS3" class="icon icon-card"/>
-              <img src="assets/icons/icons8-javascript.svg" alt="JavaScript" class="icon icon-card"/>
-          </div>
-      </section>
-      <!------------------------------------ Projects section -------------------------------------------------------------->
-      <section class="projects" id="projects">
-        <div class="carousel" data-carousel>
-          <h2 class="projects-title">Projects Examples</h2>
-          <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
-          <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
-          <ul data-slides>
-            <li class="slide" data-active>
-              <div class="project-container project-card">
-                <a href="#" target="_blank" class="project-link">
-                  <h2 class="project-title">Youtube search API project</h2>
-                  <img src="assets/images/expenseTracker.png" alt="expense-tracker" loading="lazy" class="project-pic"/>
-                </a>
-              </div>
-            </li>
-            <li class="slide">
-              <div class="project-container project-card">
-                <a href="#" target="_blank" class="project-link">
-                  <h2 class="project-title">Unsplash search API</h2>
-                  <img src="assets/images/netflixClone.png" alt="netflic-clone" loading="lazy" class="project-pic"/>
-                </a>
-              </div>            
-            </li>
-            <li class="slide">
-              <div class="project-container project-card">
-                <a href="#" target="_blank" class="project-link">
-                  <h2 class="project-title">Greeny Earth</h2>
-                  <img src="assets/images/greenyEarth.png" alt="greeny-earth" loading="lazy" class="project-pic"/>
-                </a>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-
-      </section>
-      <!------------------------------------ Contact section -------------------------------------------------------------->
-      <section class="contact" id="contact">
-        <h2 class="title">Let's get in touch, leave me a message</h2>
-        <div class="contact-form-container">
-          <div class="contact-form">
-            <form action="https://formspree.io/f/xjvlenjq" method="post">
-            <div class="form-control">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="sender-name" placeholder="First Name" class="input-field" required />
-            </div>
-            <div class="form-control">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="sender-email" placeholder="e-mail" class="input-field" required />
-            </div>
-      
-            <div class="form-control">
-              <label for="message">Message</label>
-              <textarea id="message" cols="60" rows="10" name="message" placeholder="Tell me what you need help with"  class="input-field" required>
-              </textarea>
-            </div>
-            <input type="submit" value="Submit" class="submit-btn" id="submit-btn"/>
-      
-          </form>
-          </div>
-        </div>
-        <div class="socials" alt="social links">
-          <a href="#" target="_blank">
-            <img src="assets/icons/icons8-twitter-50.svg" alt="Twitter" loading="lazy" class="socicon">
-          </a>
-          <a href="#" target="_blank">
-            <img src="assets/icons/icons8-instagram.svg" alt="Instagram" loading="lazy" class="socicon">
-          </a>
-          <a href="#" target="_blank">
-            <img src="assets/icons/icons8-github-50.svg" alt="Github" loading="lazy" class="socicon">
-          </a>
-          <a href="#" target="_blank">
-            <img src="assets/icons/icons8-linkedin.svg" alt="LinkedIn" loading="lazy" class="socicon">
-          </a>
-        </div>
-      </section>
-      <!------------------------------------ Social accounts - Fixed to the right -------------------------------------------------------------->
-
-      <a href="#about" class="nav-link">
-
-        <i class="scroll-up socicon" id="scroll-up">
-          <img src="assets/icons/icons8-home.svg" alt="scroll to top" class="socicon up-arrow">
-        </i>
-      </a>
-      <!------------------------------------ Footer section -------------------------------------------------------------->
-      <footer>
-        <p class="copywrite"></p>
-        <p class="copy">
-          Built with &#x2661; by
-          <a href="https://twitter.com/" target="_blank">
-            Nardu Malherbe
-          </a>
-        </p>
-      </footer>
-      <!------------------------------------ Website scripts -------------------------------------------------------------->
-      <script src="assets/js/app.js" defer></script>
-      <!-- Ion icons scripts -->
-      <script
-        type="module"
-        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" defer>
-      </script>
-      <script
-        nomodule
-        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer>
-      </script>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="shortcut icon" href="./assets/images/logo-l.svg" type="image/x-icon">
+  <title>Nardu.info</title>
+</head>
+<body>
+  <div class="navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="">
+          Home
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="">
+          About me
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="">
+          Services
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="">
+          Projects
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="intro">
+    <div id="profile-pic">Nardu Malherbe</div>
+    <div>
+      I offer a range of services to help you
+      create, customize and
+      level up your Shopify® store.
+      With more than 10 years of professional IT services experience, I understand that communication is the key to a successful partnerhship.
+      Allow me to assist with your Shopify store needs
     </div>
-  </body>
+  </div>
+
+  TODO - NAVBAR
+  TODO - Theme switcher
+  TODO - Intro section 
+          video + copy  
+  TODO - About Me
+  TODO - Services
+  TODO - Projects
+  TODO - Contact
+
+</body>
 </html>
