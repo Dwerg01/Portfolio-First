@@ -1,9 +1,3 @@
-html {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 :root {
 
   --retro-blue-green: #40BCB8ff;
@@ -12,40 +6,61 @@ html {
   --retro-flickr-pink: #E82E83ff;
   --retro-gunmetal: #052330ff;
 
-
-
+  --columbia-blue: #c9f0ffff;
+  --azure-x-11-web-color: #eafffdff;
+  --cultured: #efeff0ff;
+  --solid-pink: #823038ff;
+  --xiketic: #1e000eff;
 
 
 
 }
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0 auto;
+  background-image: linear-gradient(to right, var(--columbia-blue), var(--cultured));
+  width: 100vw;
+  height: 100vh;
+}
 
 
-
-
-
-
-
+@font-face {
+  font-family: Mars, 'Courier New', Courier, monospace;
+  src: url("/assets/Mars.ttf");
+}
 
 
 .navbar {
     height: 70px;
     width: 100%;
-    background: black;
-    color: white;
+    background: var(--solid-pink);
+    display: flex;
+    justify-content: space-around;
+  }
+  
+#logo > * {
+  height: 4.5rem;
+  margin-left: 5vw;
+}
+.nav {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
 }
 
-.navbar-nav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-
-    display: flex;
+  .nav > * {
+    width: 15%;
+    color: white;
     align-items: center;
+    display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     height: 100%;
-}
-
-
-
-.retro {
+    padding: 0 10px;
+    font-size: 2em;
+    text-decoration: none;
 }
