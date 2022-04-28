@@ -8,7 +8,7 @@
   --onyx: hsla(225, 10%, 24%, 1);
   --green-ryb: hsla(85, 72%, 40%, 1);
   --clear: hsla(85, 72%, 40%, 0.2);
-  --magnolia: hsla(280, 23%, 95%, 1);
+  --magnolia: hsla(280, 23%, 95%, 0.8);
   --other-blue: hsl(240, 1%, 35%, 1);
   --less-white: hsla(280, 23%, 55%, 0.2);
   --nyanza: hsla(85, 72%, 23%, 0.2);
@@ -19,6 +19,8 @@
   --retro-flickr-pink: #E82E83ff;
   --retro-gunmetal: #052330ff;
 
+  --clr-text: var(--onyx);
+  --clr-text-alt: var(--magnolia);
   --clr-bg: var(--magnolia);
   --clr-bg-lt: var(--less-white);
   --clr-bg-rt: var(--nyanza);
@@ -59,7 +61,7 @@ html, * {
 }
 
 body {
-  background: linear-gradient(to bottom, var(--clr-bg) 0%, var(--clr-accent) 100%);
+  background: linear-gradient(to bottom, var(--clr-less-white) 0%, var(--other-blue) 100%);
   width: 100vw;
   height: 100%;
   display: flex;
@@ -67,6 +69,7 @@ body {
   font-size: 1.5em;
   align-items: center;
   justify-content: center;
+  color: var(--clr-text);
 }
 
 ul {
@@ -132,6 +135,7 @@ a {
 
 .profile__name {
   font-size: var(--h2-font-size);
+  
 }
 
 .profile__profession {
@@ -143,12 +147,13 @@ a {
 
 .socials {
   display:flex;
-  width: 24rem;
+  max-width: 24rem;
   line-height: 4rem;
   justify-content: space-evenly;
 }
 
 .socicon {
+  background-color: var(--clr-bg-rt);
   padding: 0.2rem;
   fill: var(--clr-theme);
   width: 3.5rem;
@@ -166,31 +171,10 @@ a {
   transition: all ease-out 200ms;  
 }
 
-.intro {
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-  justify-content: center;
-  color: var(--clr-contrast);
-}
-.intro-card {
-  max-width: 40rem;
-}
-
 span {
   font-weight: 700;
 }
 
-
-
-section {
-  padding-top: var(--size-navbar);
-  max-width: 140rem;
-  display:flex;
-  align-items: center;
-  height: 100%;
-  width: calc(100% - 2rem);
-}
 
 .card {
   border-radius: 0.5em;
@@ -226,6 +210,9 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  width: calc(100% - 2rem);
+
+  max-width: 40rem;
 }
 
 
@@ -249,15 +236,230 @@ p {
 
 }
 
-.split {
+
+/* <<================ Filters ================>>  */
+
+.filters__content {
+  margin: 2rem 0 2.5rem;
+  background-color: var(--clr-bg);
+  padding: .375rem;
+  border-radius: .75rem;
   display: flex;
-  margin-top: 5rem;
-  height: 60vh;
-  
+  justify-content: space-between;
+  column-gap: .5rem;
+}
+
+.filters__button {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  color: var(--clr-theme);
+  font-size: var(--small-font-size);
+  font-family: var(--body-font);
+  font-weight: 500;
+  border-radius: .75rem;
+  cursor: pointer;
+  background-color: var(--clr-bg-rt);
+  transition: .3s;
+}
+
+.filters__button:hover {
+  background-color: var(--clr-bg-rt);
+  color: var(--clr-bg);
 }
 
 
-  .method {
-    justify-content: space-around;
-  
+/* <<================ Services ================>>  */
+
+.services__card {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  width: calc(100% - 1rem);
+}
+
+.services__card img {
+  width: 100%;
+  height: 100%;
+}
+
+.services__modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: -100%;
+  left: 0;
+  background: linear-gradient(180deg, 
+  var(--clr-bg-lt), 
+  var(--clr-bg-rt));
+  display: grid;
+  align-items: flex-end;
+  justify-content: left;
+  padding: 1.5rem 1.25rem;
+  transition: .3s;
+}
+
+.services__subtitle, 
+.services__title {
+  color: var(--clr-bg);
+  -webkit-text-stroke-width: 1;
+  -webkit-text-stroke-color: #fff;
+}
+
+.services__subtitle {
+  font-size: var(--small-font-size);
+}
+
+.services__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: .75rem;
+}
+
+.services__button {
+}
+
+.ri-link {
+  background-color: var(--clr-bg);
+  padding: .5rem;
+  border-radius: 0.5rem;
+}
+
+.services__card:hover .services__modal {
+  bottom: 0;
+}
+
+/* .services__card:active {
+  bottom: 0;
+} */
+
+/* <<================ Skills ================>> */
+
+.skills__content {
+  row-gap: 3.5rem;
+}
+
+.skills__title {
+  font-size: var(--h3-font-size);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.skills__box {
+  display: flex;
+  justify-content: left;
+  column-gap: 3rem;
+  align-items: flex-start;
+}
+
+.skills__group {
+  display: grid;
+  align-content: flex-start;
+  row-gap: 1rem;
+}
+
+.skills__data {
+  display: flex;
+  column-gap: .5rem;
+}
+
+.skills__data i {
+  font-size: 1rem;
+  color: var(--clr-theme);
+}
+
+.skills__name {
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.skills__level {
+  font-size: var(--smaller-font-size);
+  color: var(--clr-contrast-rt);
+}
+
+/* Hide and show projects & skills */
+.filters [data-content] {
+  display: none;
+}
+
+.filters__active[data-content] {
+  display: grid;
+}
+
+/* Activate button filter */
+.filter-tab-active {
+  background-color: var(--body-color);
+}
+
+/*=============== FOOTER ===============*/
+.footer__copy {
+  display: block;
+  margin: 2.5rem 0 2rem;
+  text-align: center;
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+}
+
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+  width: .6rem;
+  border-radius: .5rem;
+  background-color: hsl(var(--hue), 8%, 66%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--hue), 8%, 54%);
+  border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--hue), 8%, 44%);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 320px) {
+  .container {
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
+
+  .profile__info {
+    column-gap: 1.5rem;
+  }
+  .profile__buttons {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  .skills__box {
+    column-gap: 1rem;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px) {
+  .services__content {
+    grid-template-columns: 332px;
+    justify-content: center;
+  }
+
+  .filters__content {
+    width: 332px;
+    margin: 3rem auto;
+  }
+}
+
+@media screen and (min-width: 776px) {
+  .services__content,
+  .skills__content {
+    grid-template-columns: repeat(2, 332px);
+  }
+
+  .skills__content {
+    justify-content: center;
+    column-gap: 3rem;
+  }
+}
