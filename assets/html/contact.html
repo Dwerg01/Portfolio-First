@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <link rel="stylesheet" href="../css/styles.css">
+
+</head>
+<body>
+  <script src="../js/navbar.js" defer></script>
+
+    <section class="contact" id="contact">
+        <h2 class="title">Let's get in touch, leave me a message</h2>
+        <div class="contact-form-container">
+          <div class="contact-form">
+            <form action="https://formspree.io/f/xjvlenjq" method="post">
+            <div class="form-control">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="sender-name" placeholder="First Name" class="input-field" required />
+            </div>
+            <div class="form-control">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="sender-email" placeholder="e-mail" class="input-field" required />
+            </div>
+      
+            <div class="form-control">
+              <label for="message">Message</label>
+              <textarea id="message" cols="60" rows="10" name="message" placeholder="Tell me what you need help with"  class="input-field" required>
+              </textarea>
+            </div>
+            <input type="submit" value="Submit" class="submit-btn" id="submit-btn"/>
+      
+          </form>
+          </div>
+        </div>
+        <div class="socials" alt="social links">
+          <a href="#" target="_blank">
+            <img src="assets/icons/icons8-twitter-50.svg" alt="Twitter" loading="lazy" class="socicon">
+          </a>
+          <a href="#" target="_blank">
+            <img src="assets/icons/icons8-instagram.svg" alt="Instagram" loading="lazy" class="socicon">
+          </a>
+          <a href="#" target="_blank">
+            <img src="assets/icons/icons8-github-50.svg" alt="Github" loading="lazy" class="socicon">
+          </a>
+          <a href="#" target="_blank">
+            <img src="assets/icons/icons8-linkedin.svg" alt="LinkedIn" loading="lazy" class="socicon">
+          </a>
+        </div>
+      </section>
+</body>
+</html>

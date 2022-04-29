@@ -1,59 +1,59 @@
-// scroll to top funcitonality
-
-const scrollUp = document.querySelector("#scroll-up");
-
-scrollUp.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "smooth",
-
-    });
-});
-
-// Nav hamburger selsections
-
-const burger = document.querySelector("#burger-menu");
-const ul = document.querySelector("nav ul");
-const nav = document.querySelector("nav");
-const menuArrow = document.querySelector(".bars");
-
-console.log(menuArrow)
 
 
-burger.addEventListener("click", () => {
-    ul.classList.toggle("show");
-    menuArrow.classList.toggle("rotate");
+/*================= FILTER TABS =================*/
+
+const tabs = document.querySelectorAll('[data-target]');
+const tabContents = document.querySelectorAll('[data-content]');
+
+      tabs.forEach(tab => {
+          tab.addEventListener('click', () => {
+              const target = document.querySelector(tab.dataset.target);
+
+              tabContents.forEach(tc => {/* tc= tabcontent */
+                    tc.classList.remove('filters__active');
+            })
+            console.log(target)
+            target.classList.add('filters__active');
+
+            tabs.forEach(t => {
+                t.classList.remove('filter-tab-active')
+                
+            })
+            tab.classList.add('filter-tab-active')
+        })
+      })
+
+/*================= DARK LIGHT THEME =================*/
+
+
+const themeButton = document.querySelector('#theme-button')
+const darkTheme = 'dark-theme'
+const iconTheme = 'ri-sun-line'
+
+// Previously selected topic (if user selected)
+const selectedTheme = localStorage.getItem('selected-theme')
+const selectedIcon = localStorage.getItem('selected-icon')
+
+// We obtain the current theme that the interface has by validating the dark-theme class
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line'
+
+// We validate if the user previously chose a topic
+if (selectedTheme) {
+  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
+  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+  themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme)
+}
+
+// Activate / deactivate the theme manually with the button
+themeButton.addEventListener('click', () => {
+    // Add or remove the dark / icon theme
+    document.body.classList.toggle(darkTheme)
+    themeButton.classList.toggle(iconTheme)
+    // We save the theme and the current icon that the user chose
+    localStorage.setItem('selected-theme', getCurrentTheme())
+    localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
-// Close hamburger manu after a link is clicked
 
-const navLink = document.querySelectorAll('.nav-link');
-
-navLink.forEach((link) => 
-link.addEventListener("click", () => {
-    ul.classList.remove("show");
-    menuArrow.classList.remove("rotate");
-    }));
-
-    document.querySelector(".copywrite").textContent =
-    ` copyright ${(new Date().getFullYear())}`
-
-const Buttons = document.querySelectorAll(".carousel-button")
-
-Buttons.forEach(button => {
-    button.addEventListener("click", () => {
-        const offset = button.dataset.carouselButton === "next" ? 1 : -1;
-        const slides = button.closest("[data-carousel]").querySelector("[data-slides]")
-
-        const activeSlide = slides.querySelector("[data-active]")
-        let newIndex = [...slides.children].indexOf(activeSlide) + offset;
-
-        if (newIndex < 0) newIndex = slides.children.length - 1;
-        if (newIndex >= slides.children.length) newIndex = 0;
-
-        slides.children[newIndex].dataset.active = true;
-        delete activeSlide.dataset.active
-        
-    })
-})
+/*================= SCROLL REVEAL ANIMATION =================*/
