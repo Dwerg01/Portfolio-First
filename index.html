@@ -8,11 +8,17 @@
   <link rel="shortcut icon" href="/assets/icons/favicon.png" type="image/x-icon">
   <link rel="shortcut icon" href="" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="/assets/js/app.js" defer></script>
   <title>Nardu.info</title>
 </head>
 <body>
   <!-- ------------------------------------------------------------------------------------------------------------ -->  
   <header class="container profile" id="welcome">
+    <!-- ============================ Theme Button ============================ -->
+    <i class="ri-moon-line change-theme button" id="theme-button">
+
+    </i>
+
     <div class="profile__container grid">
       <div class="profile__data">
         <div class="profile__border">
@@ -22,22 +28,22 @@
         </div>
         <h2 class="profile__name">Nardu Malherbe</h2>
         <h3 class="profile__profession">
-          <p><span>Shopify Expert</span> | <span>Web Developer</span> | <span>Technologist</span></p>
+          <p><span>Shopify Expert</span> | <span>Web Developer</span></p>
         </h3>
       </div>
       </div>
     </div>
     <div class="socials" alt="social links">
-      <a href="#" target="_blank">
+      <a href="https://twitter.com/NarduInfo" target="_blank">
         <img src="/assets/icons/icons8-twitter-50.svg" alt="Twitter" loading="lazy" class="socicon button">
       </a>
-      <a href="#" target="_blank">
+      <a href="https://www.instagram.com/nardu.info/" target="_blank">
         <img src="/assets/icons/icons8-instagram.svg" alt="Instagram" loading="lazy" class="socicon button">
       </a>
-      <a href="#" target="_blank">
+      <a href="https://github.com/Dwerg01" target="_blank">
         <img src="/assets/icons/icons8-github-50.svg" alt="Github" loading="lazy" class="socicon button">
       </a>
-      <a href="#" target="_blank">
+      <a href="https://www.linkedin.com/in/nardu-malherbe-6016b615/" target="_blank">
         <img src="/assets/icons/icons8-linkedin.svg" alt="LinkedIn" loading="lazy" class="socicon button">
       </a>
     </div>
@@ -45,7 +51,7 @@
     
 
   <!-- ------------------------------------------------------------------------------------------------------------ -->
-  <section class="container services" id="services">  
+  <section class="container services" id="banner">  
           
     <div class="card light description-card">
       <img src="/assets/images/desktop shop the look_imac2013_right _med.png" alt="" class="showcase">
@@ -57,8 +63,8 @@
   <main class="main">
     <section class="filters container">
 
-      <ul class="filters__content">
-        <button class="filters__button button" data-target="#services">
+      <ul class="filters__picker">
+        <button class="filters__button button filter-tab-active" data-target="#services">
           Services
         </button>
         <button class="filters__button button" data-target="#skills">
@@ -67,7 +73,7 @@
       </ul>
       <div class="filters__sections">
         <!-- =============== SERVICES ============== -->
-        <div class="services__content grid" data-content id="services">
+        <div id="services" class="filters_content services__content grid filters__active" data-content >
           <article class="services__card">
             <img src="/assets/images/service1.jpg" alt="service-image" >
             <div class="services__modal">
@@ -123,11 +129,11 @@
 
         <!-- ================ Skills ================ -->
 
-        <div class="skills__content grid filters__active" data-content id="skills">
+        <div id="skills" class="filters_content skills__content grid" data-content >
           <div class="skills__area">
             <h3 class="skills__title">Frontend developer</h3>
             <div class="skills__box">
-              <div class="skills_group">
+              <div class="skills__group">
                 <div class="skills__data">
                   <i class="ri-checkbox-circle-line"></i>
                   <div>
@@ -151,7 +157,7 @@
                 </div>
               </div>
               
-              <div class="skills_group">
+              <div class="skills__group">
                 <div class="skills__data">
                   <i class="ri-checkbox-circle-line"></i>
                   <div>
@@ -176,10 +182,11 @@
               </div>
             </div>
           </div>
+
           <div class="skills__area">
-            <h3 class="skills__title">Other skills</h3>
+            <h3 class="skills__title">Auxiliary skills</h3>
             <div class="skills__box">
-              <div class="skills_group">
+              <div class="skills__group">
                 <div class="skills__data">
                   <i class="ri-checkbox-circle-line"></i>
                   <div>
@@ -203,11 +210,11 @@
                 </div>
               </div>
               
-              <div class="skills_group">
+              <div class="skills__group">
                 <div class="skills__data">
                   <i class="ri-checkbox-circle-line"></i>
                   <div>
-                    <h3 class="skills__name">API</h3>
+                    <h3 class="skills__name">JSON</h3>
                     <span class="skills__level">Basic</span>
                   </div>
                 </div>
@@ -226,13 +233,14 @@
       </div>
     </section>
   </main>
+  <footer class="footer">
+    <span class="footer__copy">
+      &#169; nardu.info All rights reserved
+    </span>
+  </footer>
   <!-- ------------------------------------------------------------------------------------------------------------ -->
 
   <!-- ------------------------------------------------------------------------------------------------------------ -->
-
-  <section class="" id="">
-
-  </section>
 
 </body>
 </html>
