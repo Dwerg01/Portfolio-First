@@ -10,7 +10,7 @@
   --magnolia: hsla(280, 23%, 95%, 0.9);
   --other-blue: hsl(240, 1%, 35%, 1);
   --clear: hsla(85, 72%, 40%, 0.2);
-  --less-white: hsla(280, 23%, 55%, 0.2);
+  --less-white: hsla(0, 0%, 60%, 0.2);
   --nyanza: hsla(85, 72%, 23%, 0.2);
   
   --retro-blue-green: #40BCB8ff;
@@ -355,8 +355,8 @@ body.dark-theme {
   bottom: -100%;
   left: 0;
   background: linear-gradient(180deg, 
-  var(--clr-bg-lt), 
-  var(--clr-bg-rt));
+  var(--onyx) 20%, 
+  var(--clr-bg-rt) 100%);
   display: grid;
   align-items: flex-end;
   justify-content: left;
@@ -366,7 +366,7 @@ body.dark-theme {
 
 .services__subtitle, 
 .services__title {
-  color: var(--clr-bg);
+  color: var(--magnolia);
   -webkit-text-stroke-width: 1;
   -webkit-text-stroke-color: var(--clr-theme);
 }
@@ -382,12 +382,11 @@ body.dark-theme {
 
 .services__button {
   color: var(--clr-theme);
-  background-color: transparent;
   border-radius: .5rem;
   }
 
 .ri-link {
-  background-color: var(--clr-bg);
+  background-color: var(--clr-text);
   padding: .5rem;
   border-radius: 0.5rem;
 }
