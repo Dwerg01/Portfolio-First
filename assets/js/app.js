@@ -60,10 +60,11 @@ themeButton.addEventListener('click', () => {
 
 
 const faders = document.querySelectorAll('.fade-in');
+const appearHeight = `0px 0px ${document.body.clientTop / 4 }px 0px `
 
 const appearOptions = {
     threshold: 1,
-    rootMargin: "0px 0px 75px 0px"
+    rootMargin: appearHeight
 };
 
 const appearOnScroll = new IntersectionObserver(

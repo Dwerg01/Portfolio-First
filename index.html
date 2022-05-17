@@ -12,16 +12,19 @@
 </head>
 <body>
   <!-- ------------------------------------------------------------------------------------------------------------ -->  
-  <header class="container profile" id="welcome">
+  <header class="container profile" id="profile">
     <!-- ============================ Theme Button ============================ -->
-    <i class="ri-moon-line change-theme button fade-in" id="theme-button">
-
+    <i class="ri-moon-line change-theme button" id="theme-button">
     </i>
-    <div class="profile__container grid fade-in">
+    
+    <!-- ============================ Profile ============================ -->
+
+
+    <div class="profile__container grid">
       <div class="profile__data">
         <div class="profile__border">
           <div class="profile__perfil">
-            <img src="/assets/images/pro pic.png" alt="portrait-pic" class="portrait fade-in"/>
+            <img src="/assets/images/pro pic.png" alt="portrait-pic" class="portrait"/>
           </div>
         </div>
         <h2 class="profile__name ">Nardu Malherbe</h2>
@@ -47,56 +50,42 @@
     </div>
   </header>
     
+  <ul class="filters__picker fade-in">
+    <a class="filters__button button" href="#submit-btn">
+      Work With Me
+    </a>
+    <a class="filters__button button alt" href="#filters">
+      Learn More
+    </a>
+  </ul>
   
 
-  <!-- ------------------------------------------------------------------------------------------------------------ -->
-  <section class="container" id="banner">  
+  <!-- --------------------------------------------- Video Section --------------------------------------------------->
+  <section class="container video-section" id="banner">  
     <h2 class="summary-header fade-in">
       Taking your business online and don't know where to start?
-    </h2><br><br><br>
-    <div class="summary">
-      <div class=" card borderless fade-in ">
-        <h3>Attract</h3>
-        <p>
-          Convert visitors to buyers with an 
-          attractive (and mobile ready) store with 
-          rich out-of-the-box features
-        </p>
-      </div>
-      <div class=" card borderless fade-in ">
-        <h3>
-          Trust
-        </h3>
-        <p>
-          Have peace of mind, knowing your store is 
-          always available and visitors can shop 
-          any time
-        </p>
-      </div>
-      <div class=" card borderless fade-in ">
-        <h3>
-          Automate
-        </h3>
-        <p>
-          Cater for any number of shoppers, with a 
-          platform that scales and takes care of 
-          the unexpected
-        </p>
-      </div>
+    </h2><br><br>
+    
+    <div class="iframe-container">
+      <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube-nocookie.com/embed/NEWVtA3d_TA"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      loading="lazy"
+      allowfullscreen></iframe>
+      </iframe>
     </div>
+
+    <br>
     <p class="loose-text fade-in">Shopify is a leading name in e-commerce, trusted by <br> <span>millions of store owners</span></p>
   </section>
 
+  <!-- -------------------------------------------- Banner section --------------------------------------------------->
 
-
-
-
-
-
-
-  <!-- ------------------------------------------------------------------------------------------------------------ -->
-
-  <section class="container services" id="banner">  
+  <section class="container projects" id="banner">  
           
     <div class="card contrast description-card fade-in">
       <img src="/assets/images/desktop shop-the-look.png" alt="store-display-desktop" class="desktop fade-in">
@@ -106,67 +95,71 @@
     </div>
   </section>
 
-  <!-- ------------------------------------------------------------------------------------------------------------ -->
+  <!-- ----------------------------------------- Services filters ------------------------------------------------------ -->
   <main class="main">
-    <section class="filters container">
+    <section class="filters container" id="filters">
 
       <ul class="filters__picker fade-in">
         <button class="filters__button button filter-tab-active" data-target="#services">
           Services
         </button>
-        <button class="filters__button button" data-target="#skills">
-          Skills
+        <button class="filters__button button " data-target="#projects">
+          Projects
         </button>
       </ul>
+
       <div class="filters__sections">
-        <!-- =============== SERVICES ============== -->
-        <div id="services" class="filters_content services__content grid filters__active" data-content >
-          <article class="services__card fade-in">
-            <img src="/assets/images/single product small.png" alt="service-image" >
-            <div class="services__modal">
+
+
+        <!-- =============== PROJECTS ============== -->
+
+        <div id="projects" class="filters_content projects__content grid" data-content >
+          <article class="projects__card fade-in">
+            <img src="/assets/images/single product small.png" alt="projects-image" >
+            <div class="projects__modal">
               <div>
-                <span class="services__subtitle">Shopify</span>
-                <h3 class="services__title">Celestia</h3>
-                <a href="/assets/html/contact.html" class="services__button button button__small">
+                <span class="projects__subtitle">Shopify</span>
+                <h3 class="projects__title">Celestia</h3>
+                <a href="/assets/html/contact.html" class="projects__button button button__small">
                     <i class="ri-mail-send-line link"></i>
                 </a>
               </div>
             </div>
           </article>
 
-          <article class="services__card fade-in">
-            <img src="/assets/images/fashion by example.png" alt="service-image" >
-            <div class="services__modal">
+          <article class="projects__card fade-in">
+            <img src="/assets/images/fashion by example.png" alt="projects-image" >
+            <div class="projects__modal">
               <div>
-                <span class="services__subtitle">Shopify</span>
-                <h3 class="services__title">Clothes by Example</h3>
-                <a href="/assets/html/contact.html" class="services__button button button__small">
+                <span class="projects__subtitle">Shopify</span>
+                <h3 class="projects__title">Clothes by Example</h3>
+                <a href="/assets/html/contact.html" class="projects__button button button__small">
                     <i class="ri-mail-send-line link" fill="#fff"></i>
                 </a>
               </div>
             </div>
           </article>
 
-          <article class="services__card fade-in">
-            <img src="/assets/images/custom dev.png" alt="service-image" >
-            <div class="services__modal">
+          <article class="projects__card fade-in">
+            <img src="/assets/images/custom dev.png" alt="projects-image" >
+            <div class="projects__modal">
               <div>
-                <span class="services__subtitle">Shopify</span>
-                <h3 class="services__title">Shopify Dev</h3>
-                <a href="/assets/html/contact.html" class="services__button button button__small">
+                <span class="projects__subtitle">Shopify</span>
+                <h3 class="projects__title">Shopify Dev</h3>
+                <a href="/assets/html/contact.html" class="projects__button button button__small">
                     <i class="ri-mail-send-line link"></i>
                 </a>
               </div>
             </div>
           </article>
 
-          <article class="services__card fade-in">
-            <img src="/assets/images/more projects.png" alt="service-image" >
-            <div class="services__modal">
+          <article class="projects__card fade-in">
+            <img src="/assets/images/more projects.png" alt="projects-image" >
+            <div class="projects__modal">
               <div>
-                <span class="services__subtitle">Web</span>
-                <h3 class="services__title">More Projects</h3>
-                <a href="https://github.com/Dwerg01" target="_blank" class="services__button button button__small">
+                <span class="projects__subtitle">Web</span>
+                <h3 class="projects__title">More Projects</h3>
+                <a href="https://github.com/Dwerg01" target="_blank" class="projects__button button button__small">
                     <i class="ri-link link"></i>
                 </a>
               </div>
@@ -174,111 +167,113 @@
           </article>
         </div> 
 
-        <!-- ================ Skills ================ -->
-
-        <div id="skills" class="filters_content skills__content grid" data-content >
-          <div class="skills__area">
-            <h3 class="skills__title">Frontend developer</h3>
-            <div class="skills__box">
-              <div class="skills__group">
-                <div class="skills__data">
-                  <i class="ri-checkbox-circle-line"></i>
-                  <div>
-                    <h3 class="skills__name">HTML</h3>
-                    <span class="skills__level">Skilled</span>
-                  </div>
-                </div>
-                <div class="skills__data">
-                  <i class="ri-checkbox-circle-line"></i>
-                  <div>
-                    <h3 class="skills__name">CSS</h3>
-                    <span class="skills__level">Skilled</span>
-                  </div>
-                </div>
-                <div class="skills__data">
-                  <i class="ri-checkbox-circle-line"></i>
-                  <div>
-                    <h3 class="skills__name">JavaScript</h3>
-                    <span class="skills__level">Basic</span>
-                  </div>
-                </div>
+        <!-- ================ services ================ -->
+        
+        <div id="services" class="filters_content services__content grid filters__active" data-content >
+          <div class="services__area">
+            
+            <div class="service">
+              <img class="service__icon " src="/assets/icons/construction-sml.svg" alt="Speedometer icon"></img>
+              <div class="service__text">
+                <h4>Shopify Build & Setup</h4>
+                <p class="left">
+                  You bring the vision <br> I bring the expertise <br>
+                  I help you kick-start your e&#8239;-&#8239;commerce venture 
+                  with Shopify store Design, Build and Setup.
+                </p>
               </div>
-              
-              <div class="skills__group">
-                <div class="skills__data">
-                  <i class="ri-checkbox-circle-line"></i>
-                  <div>
-                    <h3 class="skills__name">Shopify Liquid</h3>
-                    <span class="skills__level">Intermediate</span>
-                  </div>
-                </div>
-                <div class="skills__data">
-                  <i class="ri-checkbox-circle-line"></i>
-                  <div>
-                    <h3 class="skills__name">jQuery</h3>
-                    <span class="skills__level">Intermediate</span>
-                  </div>
-                </div>
-                <div class="skills__data">
-                  <i class="ri-checkbox-circle-line"></i>
-                  <div>
-                    <h3 class="skills__name">Shopify Development</h3>
-                    <span class="skills__level">Skilled</span>
-                  </div>
-                </div>
+            </div>   
+            <div class="service">
+              <img class="service__icon " src="/assets/icons/Apps.svg" alt="Apps icon"></img>
+              <div class="service__text">
+                <h4>Store Migration</h4>
+                <p class="right">
+                  Benefit from upgraded security, performance and world class support, 
+                  once you move to Shopify.
+                  I perform all aspects of the migration. 
+                </p>
               </div>
             </div>
-          </div>
-
-          <div class="skills__area">
-            <h3 class="skills__title">Auxiliary skills</h3>
-            <div class="skills__box">
-              <div class="skills__group">
-                <div class="skills__data">
-                  <i class="ri-checkbox-circle-line"></i>
-                  <div>
-                    <h3 class="skills__name">Networking</h3>
-                    <span class="skills__level">Skilled</span>
-                  </div>
-                </div>
-                <div class="skills__data">
-                  <i class="ri-checkbox-circle-line"></i>
-                  <div>
-                    <h3 class="skills__name">Linux</h3>
-                    <span class="skills__level">Intermediate</span>
-                  </div>
-                </div>
-                <div class="skills__data">
-                  <i class="ri-checkbox-circle-line"></i>
-                  <div>
-                    <h3 class="skills__name">GCP & Firebase</h3>
-                    <span class="skills__level">Basic</span>
-                  </div>
-                </div>
+            <div class="service">
+              <img class="service__icon " src="/assets/icons/speed.svg" alt="Speedometer icon"></img>
+              <div class="service__text">
+                <h4>Shopify Store Optimizations</h4>
+                <p class="left">
+                  Improve your Shopify store speed.
+                  I audit and identify why your store is slowing down, 
+                  .
+                  <br>*analysis based  
+                </p>
               </div>
-              
-              <div class="skills__group">
-                <div class="skills__data">
-                  <i class="ri-checkbox-circle-line"></i>
-                  <div>
-                    <h3 class="skills__name">JSON</h3>
-                    <span class="skills__level">Basic</span>
-                  </div>
-                </div>
-                <div class="skills__data">
-                  <i class="ri-checkbox-circle-line"></i>
-                  <div>
-                    <h3 class="skills__name">Git</h3>
-                    <span class="skills__level">Intermediate</span>
-                  </div>
-                </div>
+            </div>   
+            <div class="service">
+              <img class="service__icon" src="/assets/icons/conversion.svg" alt="Speedometer icon"></img>
+              <div class="service__text">
+                <h4>Conversion Optimization</h4>
+                <p class="right">
+                  Make sure your customers find what they want.
+                  I assist you with optimal layout, 
+                  placement and navigation so more 
+                  visitors become customers. 
+                </p>
               </div>
             </div>
+            <div class="service">
+              <img class="service__icon " src="/assets/icons/beaker.svg" alt="Speedometer icon"></img>
+              <div class="service__text">
+                <h4>Shopify Apps</h4>
+                <p class="left">
+                  I consult with you and evaluate 
+                  your challenges to select the best fit Apps.
+                  Spending too much time on admin tasks?
+                  Let me help you find an easier way
+                </p>
+              </div>
+            </div>   
+            <div class="service">
+              <img class="service__icon " src="/assets/icons/ICON-User-behavior.svg" alt="Speedometer icon"></img>
+              <div class="service__text">
+                <h4>Customize</h4>
+                <p class="right">
+                  Tailor your shopping experience.
+                  I customize stores that need unique 
+                  product and shopping options. There is always a better way.
+                </p>
+              </div>
+            </div>
+            
           </div>
+        
         </div>
-
-      </div>
     </section>
+
+    <!-- ================ Contact Form ================ -->
+
+    <section class="contact container" id="contact">
+      <h3 class="fade-in">Get in Touch</h3>
+      <div class="contact-form-container">
+        <div class="contact-form">
+          <form action="https://formspree.io/f/xjvlenjq" method="post">
+          <div class="form-control">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="sender-name" placeholder=" name" class="input-field" required />
+          </div>
+          <div class="form-control">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="sender-email" placeholder=" e-mail" class="input-field" required />
+          </div>
+    
+          <div class="form-control">
+            <label for="message">Message</label>
+            <textarea id="message" cols="60" rows="10" placeholder=" Share your ideas on e-mail or contact me on above social links"  class="input-field" required></textarea>
+          </div>
+          <input type="submit" value="Submit" class="button socicon form-submit" id="submit-btn"/>
+    
+        </form>
+        </div>
+      </div>
+      </section>
+
   </main>
   <footer class="footer">
     <span class="footer__copy">
