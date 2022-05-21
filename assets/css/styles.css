@@ -9,6 +9,7 @@
   --green-ryb: hsla(85, 72%, 40%, 1);
   --less-green: hsla(85, 72%, 40%, 0.8);
   --magnolia: hsla(280, 23%, 95%, 0.9);
+  --magnolia-half: hsla(280, 23%, 95%, 0.75);
   --eggy: hsla(84, 100%, 86%, 0.604);
   --other-blue: hsl(240, 1%, 35%, 1);
   --clear: hsla(250, 72%, 40%, 0.2);
@@ -25,6 +26,7 @@
   --clr-bg-lt: var(--nyanza);
   --clr-theme: var(--green-ryb);
   --clr-less-theme: var(--less-green);
+  --clr-less-white: var(--magnolia-half);
   --clr-text: var(--onyx);
   --clr-bg: var(--magnolia);
   --clr-contrast: var(--jet);
@@ -170,6 +172,7 @@ a {
   background-color: var(--clr-less-theme);
   padding: 0.2rem;
   width: 3.5rem;
+  cursor:pointer;
   height: auto;
   transition: all ease-in 200ms;
   box-shadow: 0px 1px .5rem var(--clr-bg);
@@ -180,7 +183,7 @@ a {
 
 .button:hover,
 .button:active {
-  filter: drop-shadow(0px 0px 1px var(--clr-bg)) drop-shadow(2px 2px 1px var(--clr-theme));
+  filter: drop-shadow(0px 0px 1px var(--clr-bg)) drop-shadow(2px 3px 1px var(--clr-theme));
   transform: translateX(-2px) translateY(-2px);
   transition: all ease-out 200ms;  
 }
@@ -384,7 +387,7 @@ body.dark-theme {
   font-weight: 500;
   border-radius: .75rem;
   cursor: pointer;
-  background-color: var(--clr-less-white);
+  background-color: var(--clr-bg-rt);
   transition: .3s;
   border: 2px solid var(--clr-bg);
 }
@@ -395,7 +398,7 @@ body.dark-theme {
 
 
 .filters__button:hover {
-  background-color: var(--clr-bg);
+  background-color: var(--clr-contrast-lt);
   color: var(--clr-theme);
   border: 2px solid transparent;
 }
@@ -442,7 +445,7 @@ body.dark-theme {
   left: 0;
   background: linear-gradient(180deg, 
   var(--clr-less-theme) 0%, 
-  var(--clr-bg-lt) 45%);
+  var(--clr-less-white) 45%);
   display: grid;
   align-items: flex-end;
   justify-content: left;
@@ -452,13 +455,15 @@ body.dark-theme {
 
 .projects__subtitle, 
 .projects__title {
-  color: var(--magnolia);
+  color: var(--onyx);
   -webkit-text-stroke-width: 1;
   -webkit-text-stroke-color: var(--clr-theme);
 }
 
 .projects__subtitle {
   font-size: var(--smaller-font-size);
+  word-spacing: normal;
+  padding: 0.5rem 0;
 }
 
 .projects__title {
@@ -498,6 +503,7 @@ body.dark-theme {
   border-radius: 0.5rem;
 }
 
+
 .service {
   background-color: var(--clr-bg-lt);
   border-radius: .5em;
@@ -510,13 +516,14 @@ body.dark-theme {
   transition: all ease-in 150ms;
 }
 
-.service:hover,
-.service:active {
-  filter: drop-shadow(0px 0px 1px var(--clr-bg)) drop-shadow(2px 2px 1px var(--clr-bg));
+.service:active,
+.service:hover {
+  filter: drop-shadow(0px 0px 0px var(--clr-contrast)) drop-shadow(0px 0px 1px var(--clr-bg));
   transform: translateX(-2px) translateY(-2px);
   font-weight: 500;
   transition: all ease-out 200ms;
 }
+
 
 .service__icon {
   /* height: auto; */
@@ -579,7 +586,7 @@ body.dark-theme {
   margin: 0 auto;
   padding: 0.938rem;
   border-radius: 5px;
-  box-shadow: 0 3px 10px var(--clr-less-theme);
+  /* box-shadow: 3px 3px 10px var(--clr-less-theme); */
 }
 
 .form-control label {
