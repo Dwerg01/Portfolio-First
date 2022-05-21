@@ -190,7 +190,7 @@ a {
 
 .form-submit {
   background-color: var(--clr-theme);
-  color: white;
+  color: var(--clr-contrast);
   padding: .5rem 1.5rem;
   width: fit-content;
   font-size: x-large;
@@ -398,7 +398,7 @@ body.dark-theme {
 
 
 .filters__button:hover {
-  background-color: var(--clr-contrast-lt);
+  background-color: var(--clr-bg-lt);
   color: var(--clr-theme);
   border: 2px solid transparent;
 }
