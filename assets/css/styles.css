@@ -90,7 +90,6 @@ a {
 
 .container {
   max-width: 968px;
-  margin-block-start: 10rem;
   height: fit-content;
   
 }
@@ -173,7 +172,6 @@ a {
   padding: 0.2rem;
   width: 3.5rem;
   cursor:pointer;
-  height: auto;
   transition: all ease-in 200ms;
   box-shadow: 0px 1px .5rem var(--clr-bg);
   border-radius: .5rem;
@@ -212,6 +210,7 @@ span {
 /* ================= Summary =================== */
 
 .summary-header {
+  margin: 2rem auto 0;
   width: 80%;
   text-align: center;
 }
@@ -312,7 +311,7 @@ p {
 .change-theme {
   position: sticky;
   top: 1rem;
-  right: 0;
+  right: calc(50% - 3rem);
   padding: .2em;
   transition: all ease-out 200ms;
   cursor: pointer;
@@ -341,7 +340,7 @@ body.dark-theme {
 
 /* <<================ Animations ================>>  */
 
-.fade-in {
+/* .fade-in {
   opacity: 0;
   transition: opacity 350ms ease-in;
 }
@@ -349,7 +348,7 @@ body.dark-theme {
 .fade-in.appear {
   opacity: 1;
 }
-
+ */
 
 
 /* <<================ Filters ================>>  */
@@ -376,11 +375,12 @@ body.dark-theme {
 }
 
 .filters__button {
-  width: 49%;
+  width: 47.5%;
   min-width: 220px;
   border: none;
   outline: none;
   padding: 1rem;
+  margin: 0.1rem;
   color: var(--clr-contrast-lt);
   font-size: var(--h3-font-size);
   font-family: var(--body-font);
@@ -512,16 +512,8 @@ body.dark-theme {
   text-align: center;
   align-items: center;
   width: 100%;
-  filter: drop-shadow(0px 0px 1px var(--clr-bg)) drop-shadow(2px 2px 1px var(--clr-theme));
+  filter: drop-shadow(0px 0px 0px var(--clr-bg)) drop-shadow(0px 0px 1px var(--clr-theme));
   transition: all ease-in 150ms;
-}
-
-.service:active,
-.service:hover {
-  filter: drop-shadow(0px 0px 0px var(--clr-contrast)) drop-shadow(0px 0px 1px var(--clr-bg));
-  transform: translateX(-2px) translateY(-2px);
-  font-weight: 500;
-  transition: all ease-out 200ms;
 }
 
 
@@ -664,14 +656,13 @@ body.dark-theme {
     row-gap: 1rem;
   }
 
-
   .filters__button {
     font-size: var(--small-font-size);
     padding: 0.5rem;
   }
 
-  .socicon {
-    width: 2rem;
+  .socials a img {
+    width: 2.5rem;
   }
 
 
@@ -699,17 +690,13 @@ body.dark-theme {
   }
 
   .filters__picker {
-    background-color: transparent;
+    width: min-content;
   }
 
-  .filters__button {
-    background-color: var(--clr-theme);
-    color: var(--clr-bg);
-  }
 
   .alt {
-    background-color: var(--clr-contrast);
-    color: var(--clr-bg);
+    background-color: var(--clr-bg-lt);
+    color: var(--clr-contrast);
   }
 
   .services__area {
