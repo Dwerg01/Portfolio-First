@@ -11,7 +11,7 @@ Aesthetics review to be done once technical review is complete
 
 ## Tech Stack
 
-**Client:** HTML, CSS, Vanilla JavaSCript
+**Client:** HTML, CSS, Vanilla JavaScript
 
 ## Tools Used
 
