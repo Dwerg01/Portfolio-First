@@ -273,24 +273,27 @@ span {
   align-items: center;
   width: calc(100% - 2rem);
   margin-block: 10rem 2rem;
-
   max-width: 40rem;
+}
+
+.description-card p {
+  margin: 10rem 0 auto;
 }
 
 
 .desktop {
-  margin-block: -10rem 8rem;
+  margin-block: -1rem 2rem;
   max-width: 480px;
   width: 75%;
   height: auto;
-  position: absolute;
+  /* position: absolute; */
 }
 
 .mobile {
   width: 25%;
   position: relative;
-  top: 0;
-  left: -25%;  
+  top: -10%;
+  left: -75%;  
 }
 
 .description-card p {
@@ -559,14 +562,15 @@ body.dark-theme {
 
 
 /* =============== Contact Form =============== */
-.contact.container {
+.contact .container {
   width: 90%;
   text-align: center;
 
 }
 
-.contact h2 {
+.contact h3 {
   text-align: center;
+  margin-top: 5rem;
 }
 
 .contact > .socials {
