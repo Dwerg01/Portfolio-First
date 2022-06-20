@@ -4,10 +4,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/assets/css/styles.css">
+
   <link rel="shortcut icon" href="/assets/icons/favicon.png" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="/assets/css/slider.css">
+
   <script src="/assets/js/app.js" defer></script>
+  <!-- <script src="/assets/js/slider.js" defer></script> -->
+
   <title>Nardu.info</title>
 </head>
 <body>
@@ -61,29 +68,6 @@
   </ul>
   
 
-  <!-- --------------------------------------------- Video Section --------------------------------------------------->
-  <section class="container video-section" id="banner">  
-    <h2 class="summary-header fade-in">
-      Taking your business online and don't know where to start?
-    </h2><br><br>
-    
-    <div class="iframe-container">
-      <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube-nocookie.com/embed/NEWVtA3d_TA"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      loading="lazy"
-      allowfullscreen></iframe>
-      </iframe>
-    </div>
-
-    <br>
-    <p class="loose-text fade-in">Shopify is a leading name in e-commerce, trusted by <br> <span>millions of store owners</span></p>
-  </section>
-
   <!-- -------------------------------------------- Banner section --------------------------------------------------->
 
   <section class="container projects" id="banner">  
@@ -96,8 +80,31 @@
     </div>
   </section>
 
+  <section class="project-slider">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="/assets/images/desktop shop-the-look.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="/assets/images/fashion by example.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="/assets/images/mobile shop-the-look.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="/assets/images/office scene.jpg" />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+
+    </div>
+  </section>
   <!-- ----------------------------------------- Services filters ------------------------------------------------------ -->
   <main class="main">
+   
+
+   
     <section class="filters container" id="filters">
 
       <ul class="filters__picker fade-in">
@@ -301,7 +308,27 @@
     </span>
   </footer>
   <!-- ------------------------------------------------------------------------------------------------------------ -->
-
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      loop: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
+  
   <!-- ------------------------------------------------------------------------------------------------------------ -->
 
 </body>

@@ -341,23 +341,7 @@ body.dark-theme {
 
 }
 
-/* <<================ Animations ================>>  */
-
-/* .fade-in {
-  opacity: 0;
-  transition: opacity 350ms ease-in;
-}
-
-.fade-in.appear {
-  opacity: 1;
-}
- */
-
-
 /* <<================ Filters ================>>  */
-
-
-
 
 .filters__sections {
   width: calc(100% - 2rem);
@@ -629,11 +613,16 @@ body.dark-theme {
 
 /* =============== SCROLL BAR =============== */
  ::-webkit-scrollbar {
-
-  background-color: var(--clr-bg);
-  outline: 1px solid (var(--clr-theme));
+   
+   background-color: var(--clr-bg);
+   outline: 1px solid (var(--clr-theme));
+   
+  }
   
+::-webkit-scrollbar-track {
+  background-color: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: var(--clr-less-theme);
   border-radius: .5rem;
