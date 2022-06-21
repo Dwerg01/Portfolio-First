@@ -7,13 +7,13 @@
 
   <link rel="shortcut icon" href="/assets/icons/favicon.png" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 
   <link rel="stylesheet" href="/assets/css/styles.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="/assets/css/slider.css">
 
   <script src="/assets/js/app.js" defer></script>
-  <!-- <script src="/assets/js/slider.js" defer></script> -->
+  <script src="/assets/js/slider.js" defer></script>
 
   <title>Nardu.info</title>
 </head>
@@ -42,7 +42,7 @@
       </div>
       </div>
     </div>
-    <div class="socials fade-in" alt="social links">
+    <div class="socials" alt="social links">
       <a href="https://twitter.com/NarduInfo" target="_blank">
         <img src="/assets/icons/icons8-twitter-50.svg" alt="Twitter" loading="lazy" class="socicon button">
       </a>
@@ -58,8 +58,8 @@
     </div>
   </header>
     
-  <ul class="filters__picker fade-in">
-    <a class="filters__button button" href="#submit-btn">
+  <ul class="filters__picker">
+    <a class="filters__button button" href="#contact">
       Work With Me
     </a>
     <a class="filters__button button alt" href="#filters">
@@ -72,30 +72,42 @@
 
   <section class="container projects" id="banner">  
           
-    <div class="card description-card fade-in">
-      <img src="/assets/images/desktop shop-the-look.png" alt="store-display-desktop" class="desktop fade-in">
-      <img src="/assets/images/mobile shop-the-look.png" alt="store-display-mobile" class="mobile fade-in">
-      <p class="loose-text fade-in">Provide a Stand Out shopping experience for your customers with faster loads and reliability</p>
+    <div class="card description-card">
+      <p class="loose-text">It will be my pleasure to set up the E-commerce store you need to reach your customers! </p>
+      <img src="/assets/images/desktop shop the look_imac2013_right _med (1).webp" alt="store-display-desktop" class="desktop">
+      <img src="/assets/images/nexus 4 shop the look_nexus4_angle1 small.webp" alt="store-display-mobile" class="mobile">
+      <p class="loose-text">Give shoppers a unique and tailored shopping experience on any device type, size or dimension</p>
       
     </div>
   </section>
 
   <section class="project-slider">
+    <h4>Past Projects</h4>
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="/assets/images/desktop shop-the-look.png" />
+          <img src="/assets/images/Celestia Single product .webp" />
         </div>
         <div class="swiper-slide">
-          <img src="/assets/images/fashion by example.png" />
+          <img src="/assets/images/Celestia Instagram.webp" />
         </div>
         <div class="swiper-slide">
-          <img src="/assets/images/mobile shop-the-look.png" />
+          <img src="/assets/images/code to store.webp" />
         </div>
         <div class="swiper-slide">
-          <img src="/assets/images/office scene.jpg" />
+          <img src="/assets/images/gold iPad small.webp" />
+        </div>
+        <div class="swiper-slide">
+          <img src="/assets/images/Adidas Desk2 (1).webp" />
+
+        </div>
+        <div class="swiper-slide">
+          <img src="/assets/images/hd coffe_imac2013_right (2).webp" />
+
         </div>
       </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
       <div class="swiper-pagination"></div>
 
     </div>
@@ -107,12 +119,12 @@
    
     <section class="filters container" id="filters">
 
-      <ul class="filters__picker fade-in">
+      <ul class="filters__picker">
         <button class="filters__button button filter-tab-active" data-target="#services">
           Services
         </button>
-        <button class="filters__button button " data-target="#projects">
-          Projects
+        <button class="filters__button button " data-target="#skills">
+          Skills
         </button>
       </ul>
 
@@ -121,63 +133,10 @@
 
         <!-- =============== PROJECTS ============== -->
 
-        <div id="projects" class="filters_content projects__content grid" data-content >
-          <article class="projects__card fade-in">
-            <img src="/assets/images/Shop the look sml.gif" alt="Shop the look gif animation" >
-            <div class="projects__modal">
-              <div>
-                <!-- <p class="projects__subtitle"> -->
-                  <p class="projects__subtitle">Project - Shopify Fashion Store <br> </p>
-                  <p class="projects__subtitle">Theme   - Shopify Premium, Prestige <br> </p>
-                  <p class="projects__subtitle">Feature - Shop the Look. Allow your customers </p>
-                  <p class="projects__subtitle">to upsell themselves by grouping product together</p>
-                <!-- </p> -->
-                <h3 class="projects__title">Shopify Themes</h3>
-                <a href="#contact" class="projects__button button button__small">
-                    <i class="ri-mail-send-line link"></i>
-                </a>
-              </div>
-            </div>
-          </article>
+        <div id="skills" class="filters_content projects__content grid" data-content >
+          <div class="skills skill-section">
 
-          <article class="projects__card fade-in">
-            <img src="/assets/images/fashion by example.png" alt="projects-image" >
-            <div class="projects__modal">
-              <div>
-                <span class="projects__subtitle">Shopify</span>
-                <h3 class="projects__title">Clothes by Example</h3>
-                <a href="#contact" class="projects__button button button__small">
-                    <i class="ri-mail-send-line link" fill="#fff"></i>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="projects__card fade-in">
-            <img src="/assets/images/custom dev.png" alt="projects-image" >
-            <div class="projects__modal">
-              <div>
-                <span class="projects__subtitle">Shopify</span>
-                <h3 class="projects__title">Shopify Dev</h3>
-                <a href="#contact" class="projects__button button button__small">
-                    <i class="ri-mail-send-line link"></i>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="projects__card fade-in">
-            <img src="/assets/images/more projects.png" alt="projects-image" >
-            <div class="projects__modal">
-              <div>
-                <span class="projects__subtitle">Web</span>
-                <h3 class="projects__title">More Projects</h3>
-                <a href="https://github.com/Dwerg01" target="_blank" class="projects__button button button__small">
-                    <i class="ri-link link"></i>
-                </a>
-              </div>
-            </div>
-          </article>
+          </div>
         </div> 
 
         <!-- ================ services ================ -->
@@ -263,7 +222,7 @@
     <!-- ================ Contact Form ================ -->
 
     <section class="contact container" id="contact">
-      <h3 class="fade-in">Get in Touch</h3>
+      <h3 class="">Get in Touch</h3>
       <div class="contact-form-container">
         <div class="contact-form">
           <form action="https://formspree.io/f/xjvlenjq" method="post">
@@ -285,7 +244,7 @@
         </form>
         </div>
       </div>
-      <div class="socials fade-in" alt="social links">
+      <div class="socials" alt="social links">
         <a href="https://twitter.com/NarduInfo" target="_blank">
           <img src="/assets/icons/icons8-twitter-50.svg" alt="Twitter" loading="lazy" class="socicon button">
         </a>
@@ -309,25 +268,7 @@
   </footer>
   <!-- ------------------------------------------------------------------------------------------------------------ -->
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      effect: "coverflow",
-      grabCursor: true,
-      loop: true,
-      centeredSlides: true,
-      slidesPerView: "auto",
-      coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: true,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-      },
-    });
-  </script>
+  
   
   <!-- ------------------------------------------------------------------------------------------------------------ -->
 
