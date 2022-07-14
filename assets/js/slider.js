@@ -3,7 +3,7 @@ var swiper = new Swiper(".mySwiper", {
 	speed: 700,
 	slideShdows: false,
 	grabCursor: true,
-	rewind: true,
+	loop: true,
 	pagination: {
 	  el: ".swiper-pagination",
 	},
